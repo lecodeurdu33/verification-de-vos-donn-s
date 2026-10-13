@@ -1,7 +1,9 @@
-# BrixHub Safe
+# Vérifier vos données (BrixHub Safe)
 
 Moteur de **protection** anti-doxxing, 100% legal et RGPD-friendly.
 Pas un moteur de dox : aucune donnee hackee, aucune donnee sensible, suppression gratuite.
+
+Accessible depuis appl-ia.fr/compte-vole (redirection via la variable BRIXHUB_SAFE_URL cote applia).
 
 ## Pages (MVP)
 1. **/protect** - Verifie si ton email a fui (HaveIBeenPwned, k-anonymite : l'email ne quitte jamais l'appareil, seul un prefixe de hash SHA-1 est envoye)
@@ -26,8 +28,12 @@ pip install -r requirements.txt
 python app.py
 ```
 
+## Deploiement et lien avec appl-ia.fr
+1. Deployer ce repo sur Railway (ou Scaleway/OVH pour l'hebergement UE)
+2. Dans les variables d'environnement du service applia, definir BRIXHUB_SAFE_URL = URL de ce service
+3. appl-ia.fr/compte-vole redirige alors automatiquement vers l'outil
+
 ## Roadmap
 - [ ] Page pseudo : elargir via les donnees publiques WhatsMyName (wmn-data.json)
 - [ ] BrixHub OSINT Pro : verification d'entreprises (Pappers.fr - donnees publiques RNE)
-- [ ] Hebergement UE + enregistrement aupres de la CNIL si necessaire
 - [ ] Rate limiting (Flask-Limiter) avant mise en ligne
