@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Mentions legales - BrixHub Safe{% endblock %}
+{% block content %}
+<h1>Mentions legales</h1>
+<h2>Responsable du traitement</h2>
+<p>Voir les informations d'hebergement et de contact dans la configuration du site. Traitement declare aupres de la CNIL (registre des traitements a tenir).</p>
+<h2>Donnees traitees</h2>
+<ul>
+  <li><strong>Verification email :</strong> aucun email n'est stocke ni transmis. Seul un prefixe de hash SHA-1 (5 caracteres) transite vers HaveIBeenPwned (k-anonymite).</li>
+  <li><strong>Verification pseudo :</strong> le pseudo teste n'est pas stocke. Seuls des profils publics sont consultes.</li>
+  <li><strong>Consentements :</strong> journal horodate (base legale : art. 6(1)(a) RGPD).</li>
+  <li><strong>Suppression :</strong> l'email de la demande est conserve uniquement pour identifier les entrees a effacer, puis efface.</li>
+</ul>
+<h2>Durées de conservation</h2>
+<p>Journaux de consentement : 12 mois maximum. Demandes de suppression : effacees apres traitement (30 jours).</li>
+<h2>Tes droits</h2>
+<p>Acces, rectification, effacement, opposition : bouton Suppression ou contact direct. Reponse sous 30 jours.</p>
+<h2>Sources de donnees</h2>
+<p>HaveIBeenPwned (API range, publique), profils publics des plateformes. Aucune donnee issue de bases piratees ou de fuites illegales n'est aggregree ni revendue.</p>
+{% endblock %}

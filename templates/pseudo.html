@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Empreinte pseudo - BrixHub Safe{% endblock %}
+{% block content %}
+<h1>Verifie ton empreinte pseudo</h1>
+<p class="privacy-note">On verifie uniquement des profils deja publics (GitHub, Reddit, Instagram, TikTok, YouTube). Aucune donnee privee.</p>
+<form id="pseudo-form">
+  <input type="text" id="username" placeholder="monpseudo" maxlength="64" required autocomplete="off">
+  <label class="consent"><input type="checkbox" id="consent" required>
+    Je certifie que ce pseudo est le mien.</label>
+  <button type="submit">Scanner</button>
+</form>
+<div id="result" class="result" hidden></div>
+<script src="/static/js/pseudo.js"></script>
+{% endblock %}

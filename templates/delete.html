@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Suppression - BrixHub Safe{% endblock %}
+{% block content %}
+<h1>Droit a l'oubli</h1>
+<p>Suppression <strong>gratuite et instantanee</strong>. Nous ne stockons quasi rien : les seules donnees liees a toi sont les journaux de consentement. Demande-leur l'effacement, c'est ton droit (RGPD art. 17).</p>
+<form id="delete-form">
+  <input type="email" id="email" placeholder="ton@email.fr" required>
+  <button type="submit">Demander la suppression</button>
+</form>
+<div id="result" class="result" hidden></div>
+<script src="/static/js/delete.js"></script>
+{% endblock %}

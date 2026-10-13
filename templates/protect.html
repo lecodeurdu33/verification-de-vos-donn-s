@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Fuites email - BrixHub Safe{% endblock %}
+{% block content %}
+<h1>Verifie si ton email a fuit</h1>
+<p class="privacy-note">Ton email est hashe (SHA-1) dans ton navigateur. Seuls les 5 premiers caracteres du hash sont envoyes. Impossible de te reconnaitre.</p>
+<form id="hibp-form">
+  <input type="email" id="email" placeholder="ton@email.fr" required autocomplete="off">
+  <label class="consent"><input type="checkbox" id="consent" required>
+    Je certifie que ce sont mes propres donnees et j'autorise ce scan.</label>
+  <button type="submit">Verifier</button>
+</form>
+<div id="result" class="result" hidden></div>
+<script src="/static/js/protect.js"></script>
+{% endblock %}
